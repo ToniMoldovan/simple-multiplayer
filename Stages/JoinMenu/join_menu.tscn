@@ -1,0 +1,123 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8axkfs6wjrfi"]
+
+[ext_resource type="Script" uid="uid://6up0i4m4jtsk" path="res://Stages/JoinMenu/join_menu.gd" id="1_yas1t"]
+[ext_resource type="Texture2D" uid="uid://di42c04urry3p" path="res://Assets/Backgrounds/main_menu_bg.png" id="2_8bc3y"]
+[ext_resource type="StyleBox" uid="uid://skjp7qat3stj" path="res://Common/CustomResources/Buttons/MainMenuButton_Normal.tres" id="2_d3i8g"]
+[ext_resource type="StyleBox" uid="uid://bo1xujyi6uiin" path="res://Common/CustomResources/Buttons/MainMenuButton_Hover.tres" id="3_8bc3y"]
+
+[node name="JoinMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yas1t")
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color(0.75500655, 0.75503004, 0.7438053, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8bc3y")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Join Game"
+horizontal_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+text = "IP:"
+
+[node name="IpEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/minimum_character_width = 10
+placeholder_text = "145.39..."
+alignment = 3
+emoji_menu_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Port:"
+
+[node name="PortEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/minimum_character_width = 10
+placeholder_text = "ex: 7777"
+alignment = 3
+max_length = 4
+emoji_menu_enabled = false
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Password:"
+
+[node name="PasswordEdit" type="LineEdit" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/minimum_character_width = 10
+placeholder_text = "enter your password"
+alignment = 3
+emoji_menu_enabled = false
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 9
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_d3i8g")
+theme_override_styles/pressed = ExtResource("3_8bc3y")
+theme_override_styles/hover = ExtResource("3_8bc3y")
+theme_override_styles/hover_pressed = ExtResource("3_8bc3y")
+theme_override_styles/focus = ExtResource("3_8bc3y")
+text = "Back"
+
+[node name="JoinButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/normal = ExtResource("2_d3i8g")
+theme_override_styles/pressed = ExtResource("3_8bc3y")
+theme_override_styles/hover = ExtResource("3_8bc3y")
+theme_override_styles/hover_pressed = ExtResource("3_8bc3y")
+theme_override_styles/focus = ExtResource("3_8bc3y")
+text = "Join Game"
