@@ -1,3 +1,4 @@
+#join_menu.gd
 extends Control
 
 @onready var ip_edit: LineEdit = %IpEdit

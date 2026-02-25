@@ -1,3 +1,4 @@
+#host_menu.gd
 extends Control
 
 @onready var port_edit: LineEdit = %PortEdit
